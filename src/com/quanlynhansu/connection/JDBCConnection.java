@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 //ket noi voi DB
 public class JDBCConnection {
-	private static String url = "jdbc:mysql://localhost:3306/crm";
+	private static String url = "jdbc:mysql://localhost:3306/quanlynhansu";
 	private static String username = "root";
 	private static String password = "123456";
 

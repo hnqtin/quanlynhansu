@@ -14,12 +14,12 @@ import com.quanlynhansu.model.Role;
 import com.quanlynhansu.util.UrlConstants;
 import com.quanlynhansu.util.PathConstants;
  
-@WebServlet(name = "RoleServlet", urlPatterns = {UrlConstants.URL_ROLE_LIST, UrlConstants.URL_ROLE_ADD,
+@WebServlet(name = "RoleController", urlPatterns = {UrlConstants.URL_ROLE_LIST, UrlConstants.URL_ROLE_ADD,
 		UrlConstants.URL_ROLE_EDIT, UrlConstants.URL_ROLE_DELETE})
 public class RoleController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	private RoleDao roleDao = null;
-	
+	 
 	@Override
 	public void init() throws ServletException {
 		 roleDao = new RoleDao();
@@ -56,7 +56,6 @@ public class RoleController extends HttpServlet{
 	private void postRoleAdd(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		//lay du lieu tu form
 		String name = req.getParameter("name");;
-		
 		String description = req.getParameter("description");
 		//Kiem tra du lieu nguoi dung nhap
 		if(name == null || name.isEmpty()) {

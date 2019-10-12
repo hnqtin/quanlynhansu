@@ -10,24 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.quanlynhansu.connection.JDBCConnection;
+import com.quanlynhansu.util.PathConstants;
+import com.quanlynhansu.util.UrlConstants;
 
-@WebServlet("/home")
+@WebServlet(name = "HomeServlet", urlPatterns = {UrlConstants.URL_HOME})
 public class HomeController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		try(Connection conn = JDBCConnection.getConnection()){
-			if(conn != null) {
-				System.out.println("Connect thanh cong");
-			}
-			else {
-				System.out.println("Connect that bai");
-			}
-		}
-			catch (Exception e) {
-				e.printStackTrace();
-			}
-		
-		req.getRequestDispatcher("/WEB-INF/views/home/index.jsp").forward(req, resp);
+		 
+		req.getRequestDispatcher(PathConstants.PATH_HOME).forward(req, resp);
 	}
 }

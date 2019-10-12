@@ -1,6 +1,9 @@
 package com.quanlynhansu.util;
 
 public class UrlConstants {
+	//HOME
+	public static final String URL_HOME = "/home";
+	
 	// ROLE
 	public static final String URL_ROLE_LIST = "/role";
 	public static final String URL_ROLE_ADD = "/role/add";

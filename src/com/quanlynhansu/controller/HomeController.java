@@ -28,6 +28,6 @@ public class HomeController extends HttpServlet{
 				e.printStackTrace();
 			}
 		
-		req.getRequestDispatcher("views/home/index.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/views/home/index.jsp").forward(req, resp);
 	}
 }

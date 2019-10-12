@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.quanlynhansu.dao.RoleDao;
+import com.quanlynhansu.dao.RoleDAO;
 import com.quanlynhansu.model.Role;
 import com.quanlynhansu.util.UrlConstants;
 import com.quanlynhansu.util.PathConstants;
@@ -18,11 +18,11 @@ import com.quanlynhansu.util.PathConstants;
 		UrlConstants.URL_ROLE_EDIT, UrlConstants.URL_ROLE_DELETE })
 public class RoleController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private RoleDao roleDao = null;
+	private RoleDAO roleDao = null;
 
 	@Override
 	public void init() throws ServletException {
-		roleDao = new RoleDao();
+		roleDao = new RoleDAO();
 	}
 
 	private void getRoleList(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

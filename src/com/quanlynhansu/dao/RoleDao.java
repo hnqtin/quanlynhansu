@@ -10,7 +10,7 @@ import java.util.List;
 import com.quanlynhansu.connection.JDBCConnection;
 import com.quanlynhansu.model.Role;
 
-public class RoleDao {
+public class RoleDAO {
 	public List<Role> findAll() {
 		String query = "SELECT * FROM roles";
 		List<Role> roles = new ArrayList<Role>();
